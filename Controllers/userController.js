@@ -86,6 +86,17 @@ const loginUser = async (req, res,next) => {
         next(error);
     }
 }
+let logout = async(req,res,next)=>{
+    try {
+        
+    
+        res.status(200).json({
+            message:"logout successful"
+        })
+    } catch (error) {
+        next(error)
+    }
+}
 
 
 
@@ -94,6 +105,7 @@ const loginUser = async (req, res,next) => {
 export default {
     createUser,
     getUsers,
-    loginUser
+    loginUser,
+    logout
 
 }
